@@ -4,8 +4,8 @@
         "ssh_username": "ubuntu",
         "base_ami": "ami-0a8e758f5e873d1c1",
         "instance_type": "t2.micro",
-        "subnet_id": "subnet-8b6d36d1",
-        "temporary_security_group_source_cidrs": "34.245.190.144/32",
+        "subnet_id": "subnet-004bdc7b402ed480a",
+        "temporary_security_group_source_cidrs": "54.75.180.122/32",
         "associate_public_ip_address": "true"
     },
     "builders": [
@@ -16,7 +16,7 @@
             "source_ami": "{{user `base_ami`}}",
             "instance_type": "{{user `instance_type`}}",
             "ssh_username": "{{user `ssh_username`}}",
-            "ami_name": "ChatServerAMI",
+            "ami_name": "ChatServerAMI-{{timestamp}}",
             "temporary_security_group_source_cidrs": "{{user `temporary_security_group_source_cidrs`}}",
             "associate_public_ip_address": "true",
             "tags": {
